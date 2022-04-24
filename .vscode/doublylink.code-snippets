@@ -1,0 +1,44 @@
+{
+	// Place your c++ workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"doubly linklistemp": {
+		"prefix": "doublylinklistt",
+		"body": [
+			"#include<iostream>",
+			"#include<bits/stdc++.h>",
+			"using namespace std;",
+
+			"struct Node",
+		   "{",
+			   "\tint data;",
+			   "\tNode *next;",
+			   "\tNode *prev;",
+			   "\tNode(int x)",
+				   "\t{",
+			   "\tdata = x;",
+			   "\tnext = nullptr;",
+			   "\tprev = nullptr;",
+		   "}",
+		   "};",
+
+			"\nint main(){\n",
+			"\tNode *head = new Node(10);",
+			"\tNode *temp1 = new Node(20);",
+			"\tNode *temp2 = new Node(30);",
+			"\thead->next = temp1;",
+			"\ttemp1->next = temp2;",
+			"\ttemp2->prev = temp1;",
+			"\ttemp1->prev = head;",
+			"\t$1",
+			"\n\treturn 0;",
+			"\n}",
+
+		],
+		"description": "This is template of doubly linked list"
+	}
+}
